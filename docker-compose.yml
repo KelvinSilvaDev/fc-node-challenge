@@ -30,7 +30,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: nodedb
     volumes:
-      - ./app:/app
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
     networks:
       - node-network
     depends_on:
